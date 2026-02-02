@@ -1,7 +1,8 @@
 graph TD
-    A[Farmer: Voice Input in Hindi/Local] -->|Amazon Transcribe| B(Text Conversion)
-    B --> C{AI Agent: Claude 3.5}
-    C -->|Search| D[AWS Bedrock: Gov Scheme PDFs]
-    C -->|Calculate| E[Market Price Prediction]
-    E --> F[Simple Advice in Local Language]
-    F -->|Amazon Polly| G[Voice Output to Farmer]
+    A[Farmer: Voice Input] -->|EARS: When user speaks| B(Amazon Transcribe)
+    B -->|EARS: The system shall convert to text| C{Agent: Claude 3.5 Sonnet}
+    C -->|EARS: If query is about schemes| D[Bedrock Knowledge Base: RAG]
+    C -->|EARS: If query is about price| E[Market Price API]
+    D -->|EARS: The system shall retrieve PDF data| F[Hinglish Response]
+    E -->|EARS: The system shall predict trends| F
+    F -->|EARS: The system shall speak back| G(Amazon Polly)
