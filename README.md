@@ -42,6 +42,6 @@ Following the AI for Bharat submission guidelines, this repo contains:
 * **Phase 2:** Prototype development with AWS Bedrock integration.
 * **Phase 3:** Integration with WhatsApp API for even easier access in villages.
 
-## 🤝 Team
-* **Project Lead:** [Your Name]
+## 🤝 Team Code Homeboys 
+* **Project Lead:** Devesh Shukla 
 * **Submission for:** AI for Bharat Hackathon 2026
