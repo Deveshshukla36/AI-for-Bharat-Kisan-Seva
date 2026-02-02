@@ -1,12 +1,15 @@
-# Project: Kisan-Seva Agent
-## Problem Statement
-Farmers in Bharat struggle to read complex government documents and don't know the best time to sell crops.
+# Design Specification: Kisan-Seva Agent
 
-## Solution
-A voice-activated AI Agent using AWS Bedrock that reads PDFs and predicts prices.
+## 1. User Story
+As a small-scale farmer in Bharat, I want to ask questions in my local language so that I can understand government schemes without reading 50-page English PDFs.
 
-## AWS Services Used
-1. **Amazon Bedrock (Claude 3.5 Sonnet):** The brain that understands Hinglish.
-2. **Amazon Transcribe:** Converts the farmer's voice to text.
-3. **Amazon Polly:** Speaks back to the farmer in a natural Indian accent.
-4. **AWS Lambda:** The "worker" that connects everything together.
+## 2. Technical Architecture (AWS Stack)
+- **Model:** Amazon Bedrock (Claude 3.5 Sonnet) - Best for Indian regional reasoning.
+- **RAG Engine:** Bedrock Knowledge Bases - To process official Govt PDFs.
+- **Voice Interface:** Amazon Transcribe (Speech-to-Text) & Amazon Polly (Hindi/Neural accents).
+- **Backend:** AWS Lambda (Serverless) - Keeps costs low for rural deployment.
+
+## 3. Implementation Plan
+- **Phase 1:** Define specs in Kiro (requirements.mmd & design.md).
+- **Phase 2:** Connect Bedrock to indexed Government agriculture PDFs.
+- **Phase 3:** Deploy voice-first interface via WhatsApp API.
